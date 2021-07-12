@@ -1,16 +1,26 @@
 # -*- coding: UTF-8 -*-
 """PyPoll Homework Challenge Solution."""
-
 # Add our dependencies.
 import csv
 import os
+import requests
 
 # Prompt user for file name to conduct analysis in - Comment lines 9 & 10 and un-comment line 13 to use the default file name "election_results.csv"
-file_name = input("Please enter the file name to perform audit analysis, file must me located under the Resources Folder: ")
-file_to_load = os.path.join("Resources", file_name)
+#file_name = input("Please enter the file name to perform audit analysis, file must me located under the Resources Folder: ")
+#file_to_load = os.path.join("Resources", file_name)
 
 # Add a variable to load a file from a path. Comment line 13 and Un-comment lines 9 & 10 to let user select file input.
-#file_to_load = os.path.join("Resources", "election_results.csv")
+file_to_load = os.path.join("Resources", "election_results.csv")
+
+# Prompt user for web url - Comment lines 
+# Public uploaded url to test: https://cvssample.s3.us-west-1.amazonaws.com/csvsample/election_results.csv
+#URL_input = input("Please enter web url to read csv file: ")
+#with requests.Session() as s:
+    #download = s.get(URL_input)
+    #decoded_content = download.content.decode('utf-8')
+    #cr = csv.reader(decoded_content.splitlines(), delimiter=',')
+    #web_file = list(decoded_content)
+    #file_to_load = web_file
 
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("analysis", "election_results.txt")
