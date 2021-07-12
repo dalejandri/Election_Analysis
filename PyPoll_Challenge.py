@@ -5,8 +5,13 @@
 import csv
 import os
 
-# Add a variable to load a file from a path.
-file_to_load = os.path.join("Resources", "election_results.csv")
+# Prompt user for file name to conduct analysis in - Comment lines 9 & 10 and un-comment line 13 to use the default file name "election_results.csv"
+file_name = input("Please enter the file name to perform audit analysis, file must me located under the Resources Folder: ")
+file_to_load = os.path.join("Resources", file_name)
+
+# Add a variable to load a file from a path. Comment line 13 and Un-comment lines 9 & 10 to let user select file input.
+#file_to_load = os.path.join("Resources", "election_results.csv")
+
 # Add a variable to save the file to a path.
 file_to_save = os.path.join("analysis", "election_results.txt")
 
